@@ -3,27 +3,30 @@ fun main() {
     val dividend = try {
         readLine()?.toDouble()
     } catch (e: NumberFormatException) {
+        println("[number format incorrect, 0.0 will be taken]")
         0.0
     } finally {
-        println("[readline() executed]")
+//        println("[readline() executed]")
     }
 
     print("Enter the divisor: ")
     val divisor = try {
         readLine()?.toDouble()
     } catch (e: NumberFormatException) {
+        println("[number format incorrect, 0.0 will be taken]")
         0.0
     } finally {
-        println("[readline() executed]")
+//        println("[readline() executed]")
     }
 
     val result = try {
         divide(dividend!!,divisor!!)
     }catch (e: DivisionByZeroException){
+        println("[division by zero error, result will be 0.0]")
         0.0
     }
     finally {
-        println("[division by zero exception]")
+//        println("[division executed]")
     }
 
     println("Result of division is $result")
