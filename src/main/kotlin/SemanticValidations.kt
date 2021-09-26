@@ -1,5 +1,3 @@
-import com.sun.crypto.provider.Preconditions
-
 fun main() {
     val list = listOf("a","b","c","d","e")
     val result = join("|",list)
